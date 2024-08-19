@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll a Dice</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5 text-center">
+        <h1>Roll a Dice</h1>
+        <form method="POST">
+            <button type="submit" class="btn btn-primary">Roll</button>
+        </form>
+        {% if dice_result is not none %}
+            <div class="mt-4">
+                <h2>You rolled a {{ dice_result }}!</h2>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

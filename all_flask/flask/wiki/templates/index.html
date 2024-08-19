@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="  p-10 h-screen">
+    <!-- Form Section -->
+    <div class="p-8 rounded w-full border py-5">
+      <form action="/wiki" method="POST" class="space-y-6 flex gap-x-3">
+        <div class="w-full">
+          <label
+            for="query"
+            class="block text-sm text-blue-500 font-medium text-gray-700"
+            >Query</label
+          >
+          <input
+            type="query"
+            id="query"
+            name="query"
+            required
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            placeholder="Search query"
+          />
+        </div>
+        <div>
+          <button
+            type="submit"
+            class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          >
+            Search
+          </button>
+        </div>
+      </form>
+    </div>
+    <div>{% if result %} {{result}} {% endif %}</div>
+  </body>
+</html>

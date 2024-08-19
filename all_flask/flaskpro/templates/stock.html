@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Price Checker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Stock Price Checker</h1>
+        <form method="POST" class="form-inline justify-content-center mt-4">
+            <input type="text" name="stock_symbol" class="form-control mr-2" placeholder="Enter stock symbol" required>
+            <button type="submit" class="btn btn-primary">Check Price</button>
+        </form>
+        {% if stock_price is not none %}
+        <div class="mt-4 text-center">
+            <h2>Current price of {{ stock_symbol.upper() }}: ${{ stock_price }}</h2>
+        </div>
+        {% elif error %}
+        <div class="mt-4 text-center text-danger">
+            <h2>{{ error }}</h2>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

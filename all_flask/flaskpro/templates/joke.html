@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke Teller</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5 text-center">
+        <h1>Want to hear a joke?</h1>
+        <form method="POST" class="mt-4">
+            <button type="submit" class="btn btn-primary">Tell me a joke!</button>
+        </form>
+        {% if joke %}
+        <div class="mt-4">
+            <h2>{{ joke }}</h2>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

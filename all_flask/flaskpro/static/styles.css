@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-container {
+    margin-top: 20px;
+}
+
+.news-article {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.news-article h2 a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.news-article h2 a:hover {
+    text-decoration: underline;
+}
